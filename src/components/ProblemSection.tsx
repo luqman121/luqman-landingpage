@@ -30,32 +30,32 @@ const problems = [
 
 export default function ProblemSection() {
   return (
-    <section id="product" className="py-10 md:py-16 px-4">
+    <section id="product" className="py-16 px-4">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="font-heading text-2xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-3">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               هل تضيع وقتك في الرد اليدوي؟
             </h2>
-            <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
+            <p className="text-slate-500 max-w-2xl mx-auto">
               أصحاب الأعمال في الخليج يواجهون نفس التحديات — والحل أبسط مما تتخيل
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {problems.map((problem, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 p-5 md:p-6 shadow-sm hover:shadow-md transition-shadow duration-200 h-full">
+              <div className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-md transition-shadow duration-200">
                 <div
                   className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${problem.bgColor} mb-4`}
                 >
                   <problem.icon size={24} className={problem.color} />
                 </div>
-                <h3 className="font-bold text-base md:text-lg text-slate-900 dark:text-slate-100 mb-2">
+                <h3 className="font-bold text-lg text-slate-900 mb-2">
                   {problem.title}
                 </h3>
-                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                <p className="text-slate-500 text-sm leading-relaxed">
                   {problem.description}
                 </p>
               </div>

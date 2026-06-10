@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import "./globals.css";
-import ThemeProvider from "@/components/ThemeProvider";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -11,7 +10,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "لقمان الهنائي — AI Automation",
+  title: "Hermes AI — موظف AI ذكي لبزنسك",
   description: "أركب لك موظف AI ذكي يخدم عملائك، يرد تلقائياً، يجمع الليدز، ويتابع المبيعات. يشتغل مع واتساب، تيليجرام، إيميل، Google Sheets، وCRM.",
 };
 
@@ -23,9 +22,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" className={cairo.variable}>
       <body className={`${cairo.className} antialiased`}>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );
