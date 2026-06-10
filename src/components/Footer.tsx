@@ -41,20 +41,20 @@ export default function Footer() {
     <footer id="faq" className="py-10 md:py-16 px-4 relative overflow-hidden">
       <div className="max-w-5xl mx-auto">
         {/* Main Footer Card */}
-        <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 px-5 py-10 md:px-12 md:py-16">
+        <div className="bg-white dark:bg-slate-800 rounded-[1.5rem] md:rounded-[2rem] shadow-xl border border-slate-100 dark:border-slate-700 px-5 py-10 md:px-12 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Brand Description */}
             <div className="lg:col-span-1">
-              <div className="flex items-center gap-2 font-bold text-lg text-slate-900 mb-4">
+              <div className="flex items-center gap-2 font-bold text-lg text-slate-900 dark:text-slate-100 mb-4">
                 <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-500 text-white text-sm font-bold">
                   L
                 </span>
                 <div className="flex flex-col items-start">
                   <span className="leading-none">لقمان الهنائي</span>
-                  <span className="text-[10px] font-medium text-slate-400 leading-none mt-0.5">AI Automation</span>
+                  <span className="text-[10px] font-medium text-slate-400 dark:text-slate-500 leading-none mt-0.5">AI Automation</span>
                 </div>
               </div>
-              <p className="text-sm text-slate-500 leading-relaxed">
+              <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                 نركب لك موظف AI ذكي يخدم عملائك ويوفر وقتك. حل عملي يناسب بزنسك.
               </p>
             </div>
@@ -62,13 +62,13 @@ export default function Footer() {
             {/* Links Columns */}
             {footerLinks.map((column, index) => (
               <div key={index}>
-                <h4 className="font-bold text-slate-900 mb-4">{column.title}</h4>
+                <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-4">{column.title}</h4>
                 <ul className="space-y-3">
                   {column.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
                       <a
                         href={link.href}
-                        className="text-sm text-slate-500 hover:text-slate-900 transition-colors duration-200"
+                        className="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200"
                       >
                         {link.label}
                       </a>
@@ -80,17 +80,17 @@ export default function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="border-t border-slate-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-slate-400">
+          <div className="border-t border-slate-100 dark:border-slate-700 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-slate-400 dark:text-slate-500">
               © 2026 لقمان الهنائي. جميع الحقوق محفوظة.
             </p>
             <div className="flex items-center gap-3">
-              <span className="text-sm text-slate-500 ml-2">تابعنا</span>
+              <span className="text-sm text-slate-500 dark:text-slate-400 ml-2">تابعنا</span>
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900 transition-colors duration-200"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-600 hover:text-slate-900 dark:hover:text-slate-100 transition-colors duration-200"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -100,15 +100,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Giant Watermark */}
-        <div className="mt-6 md:mt-8 text-center overflow-hidden">
-          <span
-            className="inline-block font-heading font-bold text-6xl md:text-9xl text-slate-300/20 select-none pointer-events-none blur-sm"
-            style={{ filter: "blur(8px)" }}
-          >
-            LUQMAN AI
-          </span>
-        </div>
       </div>
     </footer>
   );

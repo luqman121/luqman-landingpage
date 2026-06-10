@@ -6,10 +6,11 @@ import FeaturesGrid from "@/components/FeaturesGrid";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900 overflow-x-hidden">
+    <main className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 overflow-x-hidden transition-colors duration-300">
       <Navbar />
       <HeroSection />
       <ProblemSection />
@@ -18,6 +19,7 @@ export default function Home() {
       <IntegrationsSection />
       <CTASection />
       <Footer />
+      <ScrollToTopButton />
     </main>
   );
 }

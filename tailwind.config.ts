@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -40,6 +41,7 @@ const config: Config = {
         'scale-in': 'scaleIn 0.6s ease-out forwards',
         'swing': 'swing 4s ease-in-out infinite',
         'line-grow': 'lineGrow 1s ease-out forwards',
+        'spin-slow': 'spin-slow 12s linear infinite',
       },
       keyframes: {
         float: {
@@ -65,6 +67,10 @@ const config: Config = {
         lineGrow: {
           '0%': { width: '0%' },
           '100%': { width: '100%' },
+        },
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
     },

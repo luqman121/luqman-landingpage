@@ -60,10 +60,10 @@ export default function FeaturesGrid() {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="font-heading text-2xl md:text-4xl font-bold text-slate-900 mb-3">
+            <h2 className="font-heading text-2xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-3">
               بناءً لاحتياجك، نركب له التكاملات
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-sm md:text-base">
+            <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
               كل بزنس مختلف، وموظف AI يتكيف مع طريقة شغلك
             </p>
           </div>

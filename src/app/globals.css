@@ -7,6 +7,11 @@
   --background-rgb: 248, 250, 252;
 }
 
+html.dark {
+  --foreground-rgb: 248, 250, 252;
+  --background-rgb: 15, 23, 42;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -15,6 +20,16 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Smooth dark mode transitions for common elements */
+.dark *,
+.dark *::before,
+.dark *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: ease;
+  transition-duration: 0.3s;
 }
 
 /* Scroll Reveal Animation */
@@ -67,5 +82,10 @@ body {
     opacity: 1;
     transform: translateY(0);
     transition: none;
+  }
+
+  .theme-toggle-knob,
+  .theme-toggle-bg {
+    transition: none !important;
   }
 }
