@@ -12,7 +12,7 @@ export default function CTASection() {
 
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <div className="relative bg-gradient-to-br from-white to-brand-50/50 rounded-[2.5rem] shadow-2xl border border-brand-100/50 px-6 py-16 md:px-12 md:py-20 text-center overflow-hidden">
+          <div className="relative bg-gradient-to-br from-white to-brand-50/50 rounded-[2.5rem] shadow-2xl border border-brand-100 dark:border-brand-900/30/50 px-6 py-16 md:px-12 md:py-20 text-center overflow-hidden">
 
             {/* Top decorative confetti */}
             <div className="absolute top-6 left-8 text-2xl animate-confetti">🎉</div>
@@ -41,23 +41,23 @@ export default function CTASection() {
             </div>
 
             {/* Title */}
-            <h2 className="font-heading text-3xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 leading-tight">
               جاهز تطلّع بزنسك <br />
               <span className="shimmer-text">للمستوى القادم؟</span>
               <span className="text-3xl mr-2">🎯</span>
             </h2>
 
             {/* Subtitle */}
-            <p className="text-slate-500 max-w-xl mx-auto mb-8 leading-relaxed text-lg">
+            <p className="text-slate-500 dark:text-slate-400 dark:text-slate-500 max-w-xl mx-auto mb-8 leading-relaxed text-lg">
               استشارة مجانية — نبني لك الموظف الذكي المناسب لأعمالك. نناقش احتياجاتك، نصمم سير العمل، ونبدأ التركيب فوراً
             </p>
 
             {/* Urgency badges */}
             <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
               {[
-                { icon: Clock, text: "تركيب خلال 48 ساعة", color: "text-amber-600 bg-amber-50 border-amber-200" },
-                { icon: Gift, text: "استشارة مجانية 100%", color: "text-emerald-600 bg-emerald-50 border-emerald-200" },
-                { icon: Zap, text: "نتائج فورية", color: "text-brand-600 bg-brand-50 border-brand-200" },
+                { icon: Clock, text: "تركيب خلال 48 ساعة", color: "text-amber-600 bg-amber-50 dark:bg-amber-900/20 border-amber-200" },
+                { icon: Gift, text: "استشارة مجانية 100%", color: "text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 border-emerald-200" },
+                { icon: Zap, text: "نتائج فورية", color: "text-brand-600 bg-brand-50 dark:bg-brand-900/20 border-brand-200" },
               ].map((badge, i) => (
                 <div key={i} className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold ${badge.color} shadow-sm`}>
                   <badge.icon size={14} />
@@ -75,7 +75,7 @@ export default function CTASection() {
               />
               <a
                 href="#how-it-works"
-                className="inline-flex items-center gap-2 text-slate-700 hover:text-brand-600 font-semibold px-6 py-4 rounded-full border-2 border-slate-200 hover:border-brand-300 hover:bg-brand-50 transition-all duration-200 cursor-pointer group"
+                className="inline-flex items-center gap-2 text-slate-700 dark:text-slate-300 hover:text-brand-600 font-semibold px-6 py-4 rounded-full border-2 border-slate-200 dark:border-slate-700 hover:border-brand-300 hover:bg-brand-50 dark:bg-brand-900/20 transition-all duration-200 cursor-pointer group"
               >
                 شاهد كيف يعمل
                 <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
@@ -83,7 +83,7 @@ export default function CTASection() {
             </div>
 
             {/* Reassurance */}
-            <p className="mt-8 text-slate-400 text-sm">
+            <p className="mt-8 text-slate-400 dark:text-slate-500 text-sm">
               بدون عقود طويلة · بدون رسوم خفية · بدون متاعب 😊
             </p>
           </div>

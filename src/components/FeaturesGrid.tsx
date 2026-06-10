@@ -19,8 +19,8 @@ const features = [
     title: "الرد الآلي على العملاء",
     description: "يرد على رسائل واتساب وتيليجرام والبريد الإلكتروني بذكاء. يتعلم أسلوبك ويقدم إجابات دقيقة ومناسبة لكل عميل",
     color: "text-emerald-500",
-    bgColor: "bg-emerald-50",
-    borderColor: "border-emerald-100",
+    bgColor: "bg-emerald-50 dark:bg-emerald-900/20",
+    borderColor: "border-emerald-100 dark:border-emerald-900/30",
   },
   {
     icon: Filter,
@@ -28,8 +28,8 @@ const features = [
     title: "جمع وترتيب العملاء المحتملين",
     description: "يجمع بيانات العملاء المهتمين من جميع القنوات، ينظمها في Google Sheets أو CRM، ويرتبها حسب الأولوية",
     color: "text-brand-500",
-    bgColor: "bg-brand-50",
-    borderColor: "border-brand-100",
+    bgColor: "bg-brand-50 dark:bg-brand-900/20",
+    borderColor: "border-brand-100 dark:border-brand-900/30",
   },
   {
     icon: Link,
@@ -37,8 +37,8 @@ const features = [
     title: "تكامل مع الأدوات الموجودة",
     description: "يتصل بـ CRM وGoogle Sheets وn8n وغيرها. يصبح جزءاً من سير عملك الحالي دون الحاجة إلى تغييرات جوهرية",
     color: "text-amber-500",
-    bgColor: "bg-amber-50",
-    borderColor: "border-amber-100",
+    bgColor: "bg-amber-50 dark:bg-amber-900/20",
+    borderColor: "border-amber-100 dark:border-amber-900/30",
   },
   {
     icon: ListChecks,
@@ -46,8 +46,8 @@ const features = [
     title: "إدارة المهام والتذكيرات",
     description: "يذكرك بمتابعة العملاء وإرسال العروض وإنجاز المهام اليومية. مساعد شخصي ذكي ينظم يومك بفعالية",
     color: "text-violet-500",
-    bgColor: "bg-violet-50",
-    borderColor: "border-violet-100",
+    bgColor: "bg-violet-50 dark:bg-violet-900/20",
+    borderColor: "border-violet-100 dark:border-violet-900/30",
   },
   {
     icon: Send,
@@ -55,8 +55,8 @@ const features = [
     title: "متابعة العملاء تلقائياً",
     description: "يرسل رسائل متابعة للعملاء الذين لم يردوا، يذكرهم بالمواعيد، ويساعد في إتمام الصفقات بشكل أسرع",
     color: "text-rose-500",
-    bgColor: "bg-rose-50",
-    borderColor: "border-rose-100",
+    bgColor: "bg-rose-50 dark:bg-rose-900/20",
+    borderColor: "border-rose-100 dark:border-rose-900/30",
   },
 ];
 
@@ -69,14 +69,14 @@ export default function FeaturesGrid() {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-sm font-semibold mb-5">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-50 dark:bg-violet-900/20 border border-violet-200 text-violet-700 text-sm font-semibold mb-5">
               <Sparkles size={14} />
               <span>ما الذي يفعله Hermes AI؟</span>
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
               مبني لاحتياجك، مُخصَّص لأعمالك <span className="text-2xl">⚡</span>
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto">
+            <p className="text-slate-500 dark:text-slate-400 dark:text-slate-500 max-w-2xl mx-auto">
               كل عمل تجاري مختلف، وموظف AI يتكيف مع طريقة عملك تحديداً. إليك أبرز ما يقدر على فعله
             </p>
           </div>
@@ -102,7 +102,7 @@ export default function FeaturesGrid() {
         {/* CTA hint */}
         <ScrollReveal delay={0.6}>
           <div className="text-center mt-12">
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-400 dark:text-slate-500 text-sm">
               وأكثر بكثير... تحدث معنا لمعرفة ما يمكن تخصيصه لأعمالك 🛠️
             </p>
           </div>

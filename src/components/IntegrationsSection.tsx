@@ -21,7 +21,7 @@ const integrations = [
     name: "واتساب",
     description: "ردود تلقائية",
     color: "text-emerald-500",
-    bgColor: "bg-emerald-50",
+    bgColor: "bg-emerald-50 dark:bg-emerald-900/20",
     rotation: -8,
     animationDelay: 0,
     emoji: "💚",
@@ -31,7 +31,7 @@ const integrations = [
     name: "تيليجرام",
     description: "بوت ذكي",
     color: "text-sky-500",
-    bgColor: "bg-sky-50",
+    bgColor: "bg-sky-50 dark:bg-sky-900/20",
     rotation: 5,
     animationDelay: 0.5,
     emoji: "✈️",
@@ -41,7 +41,7 @@ const integrations = [
     name: "البريد الإلكتروني",
     description: "ردود مخصصة",
     color: "text-rose-500",
-    bgColor: "bg-rose-50",
+    bgColor: "bg-rose-50 dark:bg-rose-900/20",
     rotation: -4,
     animationDelay: 1,
     emoji: "📧",
@@ -51,7 +51,7 @@ const integrations = [
     name: "Google Sheets",
     description: "حفظ البيانات",
     color: "text-amber-500",
-    bgColor: "bg-amber-50",
+    bgColor: "bg-amber-50 dark:bg-amber-900/20",
     rotation: 6,
     animationDelay: 1.5,
     emoji: "📊",
@@ -61,7 +61,7 @@ const integrations = [
     name: "CRM",
     description: "إدارة العملاء",
     color: "text-violet-500",
-    bgColor: "bg-violet-50",
+    bgColor: "bg-violet-50 dark:bg-violet-900/20",
     rotation: -6,
     animationDelay: 2,
     emoji: "🗄️",
@@ -71,7 +71,7 @@ const integrations = [
     name: "n8n",
     description: "أتمتة متقدمة",
     color: "text-orange-500",
-    bgColor: "bg-orange-50",
+    bgColor: "bg-orange-50 dark:bg-orange-900/20",
     rotation: 4,
     animationDelay: 2.5,
     emoji: "⚙️",
@@ -86,7 +86,7 @@ export default function IntegrationsSection() {
 
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <div className="relative bg-white/90 backdrop-blur-sm rounded-[2.5rem] shadow-2xl border border-white/60 px-6 py-14 md:px-12 md:py-16 overflow-hidden">
+          <div className="relative bg-white dark:bg-slate-800/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-[2.5rem] shadow-2xl border border-white/60 px-6 py-14 md:px-12 md:py-16 overflow-hidden">
 
             {/* Decorative background grid lines */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -97,14 +97,14 @@ export default function IntegrationsSection() {
             />
 
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-sm font-semibold mb-5">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 dark:bg-amber-900/20 border border-amber-200 text-amber-700 text-sm font-semibold mb-5">
                 <Link2 size={14} />
                 <span>تكاملات بدون تعقيد</span>
               </div>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                 يعمل مع أدواتك الحالية <span className="text-2xl">🔌</span>
               </h2>
-              <p className="text-slate-500 max-w-2xl mx-auto">
+              <p className="text-slate-500 dark:text-slate-400 dark:text-slate-500 max-w-2xl mx-auto">
                 لا تحتاج إلى تغيير برامجك أو تعلم أدوات جديدة. يتصل مباشرةً بالأدوات التي تستخدمها يومياً
               </p>
             </div>

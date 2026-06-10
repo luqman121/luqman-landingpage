@@ -19,6 +19,7 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* Happy gradient background */
@@ -26,6 +27,12 @@ body {
   background: linear-gradient(135deg, #f0f9ff 0%, #fef9f0 25%, #f0fdf4 50%, #fdf4ff 75%, #f0f9ff 100%);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
+  transition: background 0.5s ease;
+}
+
+html.dark .happy-bg {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 25%, #0c1a2e 50%, #1a1535 75%, #0f172a 100%);
+  background-size: 400% 400%;
 }
 
 @keyframes gradientShift {
@@ -44,6 +51,14 @@ body {
   animation: shimmer 3s linear infinite;
 }
 
+html.dark .shimmer-text {
+  background: linear-gradient(90deg, #38bdf8, #a78bfa, #fb923c, #38bdf8);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 @keyframes shimmer {
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
@@ -51,11 +66,14 @@ body {
 
 /* Glowing card */
 .glow-card {
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.5s ease, border-color 0.5s ease;
 }
 .glow-card:hover {
   box-shadow: 0 20px 60px -10px rgba(14, 165, 233, 0.25), 0 8px 25px -5px rgba(0,0,0,0.08);
   transform: translateY(-4px);
+}
+html.dark .glow-card:hover {
+  box-shadow: 0 20px 60px -10px rgba(56, 189, 248, 0.15), 0 8px 25px -5px rgba(0,0,0,0.3);
 }
 
 /* Floating icon pulse ring */
@@ -81,6 +99,11 @@ body {
 .dot-pattern {
   background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
   background-size: 24px 24px;
+  transition: background-image 0.5s ease;
+}
+
+html.dark .dot-pattern {
+  background-image: radial-gradient(circle, #334155 1px, transparent 1px);
 }
 
 /* Scroll Reveal Animation */
@@ -116,6 +139,9 @@ body {
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
   transform: skewX(-20deg);
   transition: left 0.6s ease;
+}
+html.dark .shine-card::before {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
 }
 .shine-card:hover::before {
   left: 150%;

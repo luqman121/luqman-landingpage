@@ -32,11 +32,11 @@ export default function IntegrationCard({
         animationDelay: `${animationDelay}s`,
       }}
     >
-      <div className={`flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow-sm mb-3 group-hover:scale-110 transition-transform`}>
+      <div className={`flex items-center justify-center w-12 h-12 rounded-xl bg-white dark:bg-slate-800 shadow-sm mb-3 group-hover:scale-110 transition-transform`}>
         <Icon size={24} className={color} />
       </div>
-      <span className="text-xs font-bold text-slate-800 leading-tight mb-1">{name}</span>
-      <span className="text-xs text-slate-500">{description}</span>
+      <span className="text-xs font-bold text-slate-800 dark:text-slate-200 leading-tight mb-1">{name}</span>
+      <span className="text-xs text-slate-500 dark:text-slate-400">{description}</span>
       <span className="absolute -top-1.5 -right-1.5 text-sm opacity-0 group-hover:opacity-100 transition-opacity">{emoji}</span>
     </div>
   );

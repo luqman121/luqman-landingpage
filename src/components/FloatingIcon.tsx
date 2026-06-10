@@ -17,8 +17,8 @@ export default function FloatingIcon({
   className = "",
   animationClass = "animate-float",
   size = 22,
-  color = "text-slate-700",
-  bgColor = "bg-white",
+  color = "text-slate-700 dark:text-slate-300",
+  bgColor = "bg-white dark:bg-slate-800",
 }: FloatingIconProps) {
   return (
     <div

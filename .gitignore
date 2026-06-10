@@ -3,3 +3,4 @@ node_modules
 distnode_modules
 .next
 dist
+out/

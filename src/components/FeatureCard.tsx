@@ -21,12 +21,12 @@ export default function FeatureCard({
   description,
   color,
   bgColor,
-  borderColor = "border-slate-100",
+  borderColor = "border-slate-100 dark:border-slate-700",
   className = "",
 }: FeatureCardProps) {
   return (
     <div
-      className={`bg-white rounded-2xl border ${borderColor} p-7 hover:shadow-xl transition-all duration-300 group glow-card shine-card ${className}`}
+      className={`bg-white dark:bg-slate-800 rounded-2xl border ${borderColor} p-7 hover:shadow-xl transition-all duration-300 group glow-card shine-card ${className}`}
     >
       <div className="flex items-center justify-between mb-5">
         <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${bgColor} group-hover:scale-110 transition-transform duration-300`}>
@@ -34,8 +34,8 @@ export default function FeatureCard({
         </div>
         <span className="text-2xl group-hover:animate-bounce-soft">{emoji}</span>
       </div>
-      <h3 className="font-bold text-lg text-slate-900 mb-3">{title}</h3>
-      <p className="text-slate-500 text-sm leading-relaxed">{description}</p>
+      <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-3">{title}</h3>
+      <p className="text-slate-500 dark:text-slate-400 dark:text-slate-500 text-sm leading-relaxed">{description}</p>
     </div>
   );
 }

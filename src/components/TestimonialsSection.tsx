@@ -46,14 +46,14 @@ export default function TestimonialsSection() {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-amber-700 text-sm font-semibold mb-5">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 dark:bg-amber-900/20 border border-amber-200 text-amber-700 text-sm font-semibold mb-5">
               <Star size={14} className="fill-amber-400 text-amber-400" />
               <span>آراء عملاء حقيقيين</span>
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
               أعمال تثق في Hermes AI <span className="text-2xl">🏆</span>
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto">
+            <p className="text-slate-500 dark:text-slate-400 dark:text-slate-500 max-w-2xl mx-auto">
               شركات ووكالات وأعمال حرة استفادت من الموظف الذكي في منطقة الخليج
             </p>
 
@@ -64,8 +64,8 @@ export default function TestimonialsSection() {
                   <Star key={i} size={18} className="text-amber-400 fill-amber-400" />
                 ))}
               </div>
-              <span className="text-slate-700 font-bold">5.0</span>
-              <span className="text-slate-400 text-sm">من أكثر من 20 عميل</span>
+              <span className="text-slate-700 dark:text-slate-300 font-bold">5.0</span>
+              <span className="text-slate-400 dark:text-slate-500 text-sm">من أكثر من 20 عميل</span>
             </div>
           </div>
         </ScrollReveal>
@@ -88,13 +88,13 @@ export default function TestimonialsSection() {
               { emoji: "🇴🇲", label: "عُمان" },
               { emoji: "🇶🇦", label: "قطر" },
             ].map((country, i) => (
-              <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 shadow-sm text-sm text-slate-600 font-medium hover:shadow-md transition-shadow">
+              <div key={i} className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 shadow-sm text-sm text-slate-600 dark:text-slate-400 dark:text-slate-500 font-medium hover:shadow-md transition-shadow">
                 <span>{country.emoji}</span>
                 <span>{country.label}</span>
               </div>
             ))}
           </div>
-          <p className="text-center text-slate-400 text-sm mt-4">نخدم أصحاب الأعمال في منطقة الخليج العربي</p>
+          <p className="text-center text-slate-400 dark:text-slate-500 text-sm mt-4">نخدم أصحاب الأعمال في منطقة الخليج العربي</p>
         </ScrollReveal>
       </div>
     </section>

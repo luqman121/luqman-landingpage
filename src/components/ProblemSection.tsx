@@ -11,10 +11,10 @@ const problems = [
     title: "ردود يدوية تستنزف وقتك",
     description: "عملاؤك يتواصلون عبر واتساب وتيليجرام والبريد الإلكتروني، ويحتاجون ردوداً سريعة على مدار الساعة — لكن طاقتك محدودة",
     color: "text-rose-500",
-    bgColor: "bg-rose-50",
-    borderColor: "border-rose-100",
+    bgColor: "bg-rose-50 dark:bg-rose-900/20",
+    borderColor: "border-rose-100 dark:border-rose-900/30",
     stat: "4+ ساعات يومياً تضيع",
-    statColor: "text-rose-600 bg-rose-50",
+    statColor: "text-rose-600 bg-rose-50 dark:bg-rose-900/20",
   },
   {
     icon: Users,
@@ -22,21 +22,21 @@ const problems = [
     title: "العملاء المحتملون يضيعون",
     description: "عملاء مهتمون يتواصلون معك ثم يختفون — بسبب التأخر في الرد أو عدم وجود متابعة منظمة ومنتظمة",
     color: "text-amber-500",
-    bgColor: "bg-amber-50",
-    borderColor: "border-amber-100",
+    bgColor: "bg-amber-50 dark:bg-amber-900/20",
+    borderColor: "border-amber-100 dark:border-amber-900/30",
     stat: "60% من العملاء لا يُتابَعون",
-    statColor: "text-amber-600 bg-amber-50",
+    statColor: "text-amber-600 bg-amber-50 dark:bg-amber-900/20",
   },
   {
     icon: Clock,
     emoji: "🔄",
     title: "مهام متكررة تُرهق فريقك",
     description: "نفس الأعمال كل يوم: ترتيب البيانات، إرسال التذكيرات، متابعة العملاء — فريقك يستحق التفرغ للأهم",
-    color: "text-slate-500",
-    bgColor: "bg-slate-50",
-    borderColor: "border-slate-100",
+    color: "text-slate-500 dark:text-slate-400",
+    bgColor: "bg-slate-50 dark:bg-slate-800/50",
+    borderColor: "border-slate-100 dark:border-slate-700",
     stat: "3× تكلفة أعلى بدون أتمتة",
-    statColor: "text-slate-600 bg-slate-100",
+    statColor: "text-slate-600 dark:text-slate-400 dark:text-slate-500 bg-slate-100 dark:bg-slate-800",
   },
 ];
 
@@ -49,14 +49,14 @@ export default function ProblemSection() {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-14">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 border border-rose-200 text-rose-600 text-sm font-semibold mb-5">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 dark:bg-rose-900/20 border border-rose-200 text-rose-600 text-sm font-semibold mb-5">
               <AlertTriangle size={14} />
               <span>المشكلة التي يعاني منها أصحاب الأعمال</span>
             </div>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
               هل تضيع وقتك في الردود اليدوية؟ <span className="text-2xl">😩</span>
             </h2>
-            <p className="text-slate-500 max-w-2xl mx-auto text-base leading-relaxed">
+            <p className="text-slate-500 dark:text-slate-400 dark:text-slate-500 max-w-2xl mx-auto text-base leading-relaxed">
               أصحاب الأعمال في الخليج يواجهون نفس التحديات يومياً — والحل أبسط وأذكى مما تتخيل
             </p>
           </div>
@@ -65,7 +65,7 @@ export default function ProblemSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {problems.map((problem, index) => (
             <ScrollReveal key={index} delay={index * 0.12}>
-              <div className={`bg-white rounded-2xl border ${problem.borderColor} p-7 hover:shadow-xl transition-all duration-300 glow-card shine-card group`}>
+              <div className={`bg-white dark:bg-slate-800 rounded-2xl border ${problem.borderColor} p-7 hover:shadow-xl transition-all duration-300 glow-card shine-card group`}>
                 {/* Emoji + icon */}
                 <div className="flex items-center justify-between mb-5">
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${problem.bgColor}`}>
@@ -74,10 +74,10 @@ export default function ProblemSection() {
                   <span className="text-3xl group-hover:animate-wiggle">{problem.emoji}</span>
                 </div>
 
-                <h3 className="font-bold text-lg text-slate-900 mb-3">
+                <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-3">
                   {problem.title}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed mb-5">
+                <p className="text-slate-500 dark:text-slate-400 dark:text-slate-500 text-sm leading-relaxed mb-5">
                   {problem.description}
                 </p>
 

@@ -25,9 +25,9 @@ export default function WhatsAppButton({
     primary:
       "bg-cta text-white hover:bg-cta-hover shadow-lg hover:shadow-xl hover:scale-[1.02]",
     secondary:
-      "bg-white text-slate-900 border-2 border-slate-200 hover:border-slate-300 hover:bg-slate-50 hover:scale-[1.02]",
+      "bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-slate-200 dark:border-slate-700 hover:border-slate-300 hover:bg-slate-50 dark:bg-slate-800/50 hover:scale-[1.02]",
     outline:
-      "bg-transparent text-slate-900 border-2 border-slate-900 hover:bg-slate-900 hover:text-white",
+      "bg-transparent text-slate-900 dark:text-white border-2 border-slate-900 hover:bg-slate-900 hover:text-white",
   };
 
   const sizeClasses = {

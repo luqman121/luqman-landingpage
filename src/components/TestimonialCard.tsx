@@ -30,11 +30,11 @@ export default function TestimonialCard({
       <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[88%] h-14 bg-gradient-to-br from-brand-400 to-violet-500 rounded-b-3xl shadow-lg" />
 
       {/* Main Card */}
-      <div className="relative bg-white rounded-2xl border border-slate-200 shadow-lg p-7 text-center hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 shine-card overflow-hidden">
+      <div className="relative bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg p-7 text-center hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 shine-card overflow-hidden">
 
         {/* Placeholder badge */}
         {isPlaceholder && (
-          <div className="absolute top-3 left-3 text-xs text-slate-300 bg-slate-50 px-2 py-0.5 rounded-full border border-slate-100">
+          <div className="absolute top-3 left-3 text-xs text-slate-300 bg-slate-50 dark:bg-slate-800/50 px-2 py-0.5 rounded-full border border-slate-100 dark:border-slate-700">
             قريباً
           </div>
         )}
@@ -44,13 +44,13 @@ export default function TestimonialCard({
 
         {/* Quote icon */}
         <div className="flex justify-center mb-4">
-          <div className="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-full bg-brand-50 dark:bg-brand-900/20 flex items-center justify-center">
             <Quote size={18} className="text-brand-400" />
           </div>
         </div>
 
         {/* Quote text */}
-        <p className="text-sm text-slate-600 leading-relaxed mb-6 italic">
+        <p className="text-sm text-slate-600 dark:text-slate-400 dark:text-slate-500 leading-relaxed mb-6 italic">
           &ldquo;{quote}&rdquo;
         </p>
 
@@ -71,8 +71,8 @@ export default function TestimonialCard({
             {emoji}
           </div>
           <div className="text-right">
-            <p className="font-bold text-slate-900 text-sm">{name}</p>
-            <p className="text-xs text-slate-500">{role} · {company}</p>
+            <p className="font-bold text-slate-900 dark:text-white text-sm">{name}</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">{role} · {company}</p>
           </div>
         </div>
       </div>

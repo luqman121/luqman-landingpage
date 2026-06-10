@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" className={cairo.variable}>
-      <body className={`${cairo.className} antialiased`}>
+      <body className={`${cairo.className} antialiased transition-colors duration-500`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
