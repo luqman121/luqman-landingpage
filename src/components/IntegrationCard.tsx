@@ -11,6 +11,7 @@ interface IntegrationCardProps {
   bgColor: string;
   rotation?: number;
   animationDelay?: number;
+  emoji?: string;
 }
 
 export default function IntegrationCard({
@@ -21,22 +22,22 @@ export default function IntegrationCard({
   bgColor,
   rotation = 0,
   animationDelay = 0,
+  emoji = "✨",
 }: IntegrationCardProps) {
   return (
     <div
-      className={`flex flex-col items-center gap-2 p-5 rounded-2xl bg-white border border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-float cursor-default`}
+      className={`relative flex flex-col items-center text-center p-4 rounded-2xl ${bgColor} border border-white/80 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-default group`}
       style={{
         transform: `rotate(${rotation}deg)`,
         animationDelay: `${animationDelay}s`,
       }}
     >
-      <div
-        className={`flex items-center justify-center w-14 h-14 rounded-xl ${bgColor}`}
-      >
-        <Icon size={28} className={color} />
+      <div className={`flex items-center justify-center w-12 h-12 rounded-xl bg-white shadow-sm mb-3 group-hover:scale-110 transition-transform`}>
+        <Icon size={24} className={color} />
       </div>
-      <span className="font-semibold text-sm text-slate-900">{name}</span>
-      <span className="text-xs text-slate-500 text-center">{description}</span>
+      <span className="text-xs font-bold text-slate-800 leading-tight mb-1">{name}</span>
+      <span className="text-xs text-slate-500">{description}</span>
+      <span className="absolute -top-1.5 -right-1.5 text-sm opacity-0 group-hover:opacity-100 transition-opacity">{emoji}</span>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Star, User } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 interface TestimonialCardProps {
   name: string;
@@ -10,6 +10,8 @@ interface TestimonialCardProps {
   quote: string;
   rating: number;
   isPlaceholder?: boolean;
+  emoji?: string;
+  country?: string;
 }
 
 export default function TestimonialCard({
@@ -19,47 +21,60 @@ export default function TestimonialCard({
   quote,
   rating,
   isPlaceholder = false,
+  emoji = "😊",
+  country = "🌍",
 }: TestimonialCardProps) {
   return (
-    <div className="relative">
-      {/* Envelope Background */}
-      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-12 bg-gradient-to-t from-purple-500 to-violet-400 rounded-b-2xl" />
+    <div className="relative group">
+      {/* Envelope shadow behind */}
+      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[88%] h-14 bg-gradient-to-br from-brand-400 to-violet-500 rounded-b-3xl shadow-lg" />
 
-      {/* Card */}
-      <div className="relative bg-white rounded-2xl border border-slate-200 shadow-lg p-6 text-center">
+      {/* Main Card */}
+      <div className="relative bg-white rounded-2xl border border-slate-200 shadow-lg p-7 text-center hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1 shine-card overflow-hidden">
+
+        {/* Placeholder badge */}
         {isPlaceholder && (
-          <div className="absolute top-3 right-3 text-xs text-slate-400 bg-slate-100 px-2 py-1 rounded-full">
-            placeholder
+          <div className="absolute top-3 left-3 text-xs text-slate-300 bg-slate-50 px-2 py-0.5 rounded-full border border-slate-100">
+            قريباً
           </div>
         )}
 
-        {/* Avatar */}
-        <div className="mx-auto mb-4 w-14 h-14 rounded-full bg-slate-100 flex items-center justify-center border-2 border-slate-200">
-          <User size={28} className="text-slate-400" />
+        {/* Country flag top right */}
+        <div className="absolute top-3 right-3 text-xl">{country}</div>
+
+        {/* Quote icon */}
+        <div className="flex justify-center mb-4">
+          <div className="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center">
+            <Quote size={18} className="text-brand-400" />
+          </div>
         </div>
 
-        {/* Name & Role */}
-        <h4 className="font-bold text-slate-900 mb-1">{name}</h4>
-        <p className="text-sm text-slate-500 mb-3">
-          {role} في {company}
+        {/* Quote text */}
+        <p className="text-sm text-slate-600 leading-relaxed mb-6 italic">
+          &ldquo;{quote}&rdquo;
         </p>
 
         {/* Rating */}
-        <div className="flex items-center justify-center gap-1 mb-4">
+        <div className="flex items-center justify-center gap-0.5 mb-5">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}
-              size={16}
-              className={
-                i < rating ? "text-amber-400 fill-amber-400" : "text-slate-200"
-              }
+              size={15}
+              className={i < rating ? "text-amber-400 fill-amber-400" : "text-slate-200"}
             />
           ))}
-          <span className="text-sm text-slate-600 mr-1">{rating}.0</span>
         </div>
 
-        {/* Quote */}
-        <p className="text-sm text-slate-500 leading-relaxed">&ldquo;{quote}&rdquo;</p>
+        {/* Avatar with emoji */}
+        <div className="flex items-center justify-center gap-3">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-brand-400 to-violet-500 flex items-center justify-center text-2xl border-2 border-white shadow-md">
+            {emoji}
+          </div>
+          <div className="text-right">
+            <p className="font-bold text-slate-900 text-sm">{name}</p>
+            <p className="text-xs text-slate-500">{role} · {company}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
