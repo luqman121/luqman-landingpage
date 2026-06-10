@@ -10,7 +10,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "Hermes AI — موظف AI ذكي لبزنسك",
+  title: "لقمان الهنائي — AI Automation",
   description: "أركب لك موظف AI ذكي يخدم عملائك، يرد تلقائياً، يجمع الليدز، ويتابع المبيعات. يشتغل مع واتساب، تيليجرام، إيميل، Google Sheets، وCRM.",
 };
 
